@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <me.dm7.barcodescanner.zxing.ZXingScannerView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/qrCodeScanner"
+        ></me.dm7.barcodescanner.zxing.ZXingScannerView>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/qrCodeScanner"
+        android:textSize="15dp"
+        android:textColor="@color/color_blue"
+        android:gravity="center"
+        android:id="@+id/scantext"
+        ></TextView>
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_weight="1"
+        android:layout_margin="3dp"
+        android:text="Save Data"
+        android:layout_above="@+id/linearL"
+        android:textColor="@color/color_blue"
+        android:textSize="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/buttonshape"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearL"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/generateBtn"
+            android:text="Create QR Code"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:textColor="@color/color_blue"
+            android:textSize="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/buttonshape"
+            />
+        <Button
+            android:id="@+id/showBtn"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:text="Show Save Data"
+            android:textColor="@color/color_blue"
+            android:textSize="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/buttonshape"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
