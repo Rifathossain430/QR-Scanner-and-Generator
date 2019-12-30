@@ -66,13 +66,15 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
             }
         });
 
+
+        //Post Method Call here
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (textView.getText().toString().equals("")){
                     Toast.makeText(MainActivity.this, "Nothing to Save", Toast.LENGTH_SHORT).show();
                 }else{
-                    Bar bar = new Bar("hello");
+                    Bar bar = new Bar(textView.getText().toString());
                     retrofitInterface = new ApiClient().getInstance().getApi();
                     Call<Bar> call = retrofitInterface.postData(bar);
                     call.enqueue(new Callback<Bar>() {
